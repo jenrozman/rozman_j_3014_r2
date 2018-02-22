@@ -1,0 +1,20 @@
+<?php
+	require_once('admin/phpscripts/config.php');
+	if(isset($_GET['id'])) {
+		//get the movie
+		$tbl = "tbl_movies";
+		$col = "movies_id";
+		$id = $_GET['id'];
+		$getMovies = getSingle($tbl, $col, $id);
+	}//cant go to the details specifically, start at what calls this page
+
+	
+?>
+
+<h2>This content could be your nav</h2>
+<ul class="filterNav">
+<li><a href="index.php?filter=action">Action</a></li>
+<li><a href="index.php?filter=comedy">Comedy</a></li>
+<li><a href="index.php?filter=family">Family</a></li>
+<li><a href="index.php">All</a></li>
+</ul>
