@@ -1,12 +1,15 @@
 <?php
 	require_once('phpscripts/config.php');
-	 confirm_logged_in(); //if doesn't log in, you can't just type in the url or if someone bookmarks the page. comment out when working on it, then add back when it's done
+	//confirm_logged_in(); //if doesn't log in, you can't just type in the url or if someone bookmarks the page. comment out when working on it, then add back when it's done
 
 	if(isset($_POST['submit'])){
+
+
+
+
 		$fname = trim($_POST['fname']);
 		$username = trim($_POST['username']);
 		$password = trim($_POST['password']);
-
 		$email = trim($_POST['email']);
 		$userlvl = $_POST['userlvl']; //don't need trim on the list because it's just a suggestion
 		if(empty($userlvl)){//see if userlvl is empty
@@ -35,6 +38,7 @@
 	    foreach ($pass_order as $char) { //gives a set pw
 	        $passWord .= $char;
 	    }	    return $passWord;	}
+
 ?>
 
 <!doctype html>
@@ -42,6 +46,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Create User!</title>
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 <body>
 
@@ -50,19 +56,19 @@
 	<form action="admin_createuser.php" method="post">
 
 		<label>First Name:</label>
-		<input type="text" name="fname" value=""><br><br>
+		<input type="text" name="fname" class="input" value=""><br><br>
 		<label>Username:</label>
-		<input type="text" name="username" value=""><br><br>
+		<input type="text" name="username" class="input" value=""><br><br>
 		<label>Password:</label>
-		<input type="text" readonly name="password" value="<?php echo "\n".randomPw()."\n"; ?>"><br>	<br><!--Lock Input so they have to use the random password-->
-		<label>Email:</label>
-		<input type="text" name="email" value=""><br><br>
-		<select name="userlvl">
+		<input type="password" readonly name="password" class="input" value="<?php echo "\n".randomPw()."\n"; ?>"><br><br><!--Lock Input so they have to use the random password-->
+		<label class="email">Email:</label>
+		<input type="text" name="email" class="input" value=""><br><br>
+		<select name="userlvl" class="select">
 			<option value="">Select User Level</option><!--leave blank so it explains it and we can trigger an error if they leave this blank-->
 			<option value="2">Web Admin</option> <!--user # not text for value-->
 			<option value="1">Web Master</option>
 		</select><br><br>
-		<input type="submit" name="submit" value="Create User">
+		<input type="submit" name="submit" class="sub" value="Create User">
 
 
 	</form>

@@ -1,0 +1,62 @@
+body {
+	background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/dark_wall.png);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px;
+  padding: 5px 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.form{
+  background: rgba(255, 255, 255, 0.05);
+  border: 3px solid  rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 40%;
+  margin-left: 30%;
+  padding: 5px;
+}
+input{
+  margin: auto;
+  width: 50%;
+}
+label{margin-right: 150px;}
+.email{margin-right: 200px;}
+.input{
+  border-radius: 5px;
+  border: 3px solid  rgba(255, 255, 255, 0.5);
+  background:  rgba(255, 255, 255, 1);
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  padding: 2px;
+  width: 19%;
+  font-size: 20px;
+}
+.input:hover{
+   background: rgba(255, 255, 255, 0.1);
+   color: white;
+}
+.select{
+  border-radius: 5px;
+  border: 3px solid  rgba(255, 255, 255, 0.5);
+  background:  rgba(255, 255, 255, 1);
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  padding: 2px;
+  width: 20%;
+  font-size: 20px;
+}
+.sub{
+  border-radius: 5px;
+  border: 3px solid  rgba(255, 255, 255, 0.5);
+  background:  rgba(255, 255, 255, 1);
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  padding: 2px;
+  width: 15%;
+  font-size: 20px;
+}
+.sub:hover{
+   background: rgba(255, 255, 255, 0.1);
+   color: white;
+}
